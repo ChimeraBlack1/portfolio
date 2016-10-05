@@ -116,6 +116,10 @@ p {
     box-shadow: 0px 3px 20px rgba(0,0,0,0);
 }
 
+.zeroOpacity {
+    opacity: 0;
+}
+
 .zeroPadding {
     padding: 0;
 }
@@ -186,6 +190,44 @@ p {
     height: 15rem;
     padding: 2% 10% 10% 10%;
 }
+
+/* Social Icons */
+
+
+.social-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4vh;
+    width: 4vh;
+    z-index: 1000;
+    position: absolute;
+    top: 35%;
+    right: 42%;   
+    cursor: pointer;
+    transition: opacity 800ms;
+}
+
+.facebook-icon {
+    background-image: url(../img/fb-white.png);
+
+}
+
+
+.youtube-icon {
+    background-image: url(../img/youtube2.png); 
+    top: 45%;
+    right: 30%;
+}
+
+.github-icon {
+    background-image: url(../img/github2.png);
+    height: 5vh;
+    width: 5vh;
+    top: 32%;
+    right: 15%;
+   
+}
+
 
 
 /*  About Me   */
