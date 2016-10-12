@@ -80,6 +80,7 @@ p {
     width: 100vw;
     height: 9vh;
     min-height: 50px;
+    max-height: 70px;
     background: rgba(0,0,0,1);
     z-index: 10;   
     box-shadow: 0px 3px 20px rgba(0,0,0,0.75);
@@ -127,10 +128,12 @@ p {
 .hamburger > .donut {
     margin: 13.33% auto;
     width: 66.66%;
+    min-width: 9.915px;
     height: 0.6vh;
+    min-height: 2.741px;
     background-color: #fff;
     opacity: 1;
-    transition: margin 700ms, opacity 900ms;   
+    transition: margin 700ms, opacity 900ms; 
 }
 
 
@@ -152,10 +155,12 @@ p {
     opacity: 0;
 }
 
+/*
 
 .hamburger > #donutOne {
     
 }
+*/
 
 
 /* Navigation */
@@ -170,8 +175,7 @@ p {
     line-height: 150%;
     background-color: rgba(0,0,0,.9);
     transition: margin-top 600ms, padding-top 800ms, height 600ms, opacity 1.2s;
-    top: -5%;
-    padding-top: 8rem;    
+    top: -5%;  
     position: fixed;
 }
 
@@ -182,6 +186,7 @@ p {
     opacity: 0.9;
     height: 125px;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.75);
+    padding-top: 8rem;
 }
 
 
@@ -198,7 +203,9 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     height: 4vh;
+    min-height: 25px;
     width: 4vh;
+    min-width: 25px;
     z-index: 1000;
     position: absolute;
     top: 35%;
@@ -222,7 +229,9 @@ p {
 .github-icon {
     background-image: url(../img/github2.png);
     height: 5vh;
+    min-height: 30px;
     width: 5vh;
+    min-width: 30px;
     top: 32%;
     right: 15%;
    
