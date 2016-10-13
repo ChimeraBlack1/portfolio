@@ -1,8 +1,15 @@
+// **** HTML *** 
+
+// Hamburger menu HTML for injection
 x = "<div id='hamburger' class='hamburger' onclick='clickBurger()'>";
     x +="<div id='donutOne' class='donut'></div>";
     x += "<div id='donutTwo' class='donut'></div>";
     x += "<div id='donutThree' class='donut'></div>";
+    x += "<div id='donutFour' class='closeMenu'></div>";
+    x += "<div id='donutFive' class='closeMenu'></div>";
 x += "</div>";
+
+// Social icon HTML for injection
 x += "<a href='https://www.facebook.com/christopher.parke.566' target='_blank'>";
     x += "<div class='social-icon facebook-icon'></div>";
 x += "</a>";
@@ -13,9 +20,13 @@ x += "<a href='https://github.com/ChimeraBlack1' target='_blank'>";
     x += "<div class='social-icon github-icon'></div>";
 x += "</a>";
 
+// inject Hamburger menu and Social icons into Header Element
 document.getElementById('header').innerHTML = x;
-//    "<div class='hamburger'><div id='donutOne' class='donut'></div><div id='donutTwo' class='donut'></div><div id='donutThree' class='donut'></div>";
 
+
+
+
+// **** FUCNTION DECLARATIONS *** 
 
 var clickBurger = function() {
     // Check is Hamburger Menu is open
@@ -41,21 +52,29 @@ var clickBurger = function() {
             
     }
     
+    // if document is scrolled down and the hamburger's first donut has the class 'open1'...
     if(document.body.scrollTop > 50 && $('.hamburger > #donutOne').hasClass('open1')) {
+        
+        // ...add the padding back in on the header to squeeze the hamburger back in
         $('.header').removeClass('zeroPadding');
+        // ...bring the social icons back into visibilty.
         $('.social-icon').removeClass('zeroOpacity');
+        // ...remove the border radius class from the hamburger.
+         $('.hamburger').removeClass('rounded');
     }
-    
+    // if the document is scrolled down and the hambruger's first donut DOES NOT have the open1 class...
     if(document.body.scrollTop > 50 && !$('.hamburger > #donutOne').hasClass('open1')) {
+        
+        // ...take the padding off of the header to push the hamburger into the corner.
         $('.header').addClass('zeroPadding');
+        // ...make the social icons invisible.
         $('.social-icon').addClass('zeroOpacity');
+        // ...add the border radius for the Hamburger in
+        $('.hamburger').addClass('rounded');
         
     }
 }
 
-//var opaqueHeader = function() {
-//        $('.header').addClass('opaque');
-//}
 
 var noHeader = function() {
 
@@ -74,7 +93,16 @@ var noHeader = function() {
     if(document.body.scrollTop > 50 && !$('.hamburger > #donutOne').hasClass('open1')){
         $('.header').addClass('zeroPadding');
         $('.social-icon').addClass('zeroOpacity');
+        $('.hamburger').addClass('rounded');
+        
+    } 
+    
+    if (!$('.header').hasClass('transparent')){
+        $('.hamburger').removeClass('rounded');
     }
-
+    
+    if(document.body.scrollTOp > 50 && $('.hamburger > #donutOne').hasClass('open1')){
+        $('.hamburger').removeClass('rounded');
+    }
 }
 
