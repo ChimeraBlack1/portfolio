@@ -150,6 +150,41 @@ p {
 }
 
 
+/* Close nav menu */
+
+.x1, .x2{
+    opacity: 0;
+    height: 40%;
+    width: 10%;
+    min-width: 2.741px;
+    background-color: #fff;
+    position: absolute;
+    top: 30%;
+    transition: transform 1s, opacity 1s;
+}
+
+#donutFour {
+    right: 25%;
+}
+
+#donutFive {
+    
+}
+
+.x1open {
+    left:45%;
+    transform: rotate(-45deg);
+    opacity: 1;
+}
+
+.x2open {
+    right: 45%;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
+
+
 
 /* Navigation */
 

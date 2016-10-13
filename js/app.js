@@ -5,8 +5,8 @@ x = "<div id='hamburger' class='hamburger' onclick='clickBurger()'>";
     x +="<div id='donutOne' class='donut'></div>";
     x += "<div id='donutTwo' class='donut'></div>";
     x += "<div id='donutThree' class='donut'></div>";
-    x += "<div id='donutFour' class='closeMenu'></div>";
-    x += "<div id='donutFive' class='closeMenu'></div>";
+    x += "<div id='donutFour' class='x1'></div>";
+    x += "<div id='donutFive' class='x2'></div>";
 x += "</div>";
 
 // Social icon HTML for injection
@@ -29,21 +29,30 @@ document.getElementById('header').innerHTML = x;
 // **** FUCNTION DECLARATIONS *** 
 
 var clickBurger = function() {
-    // Check is Hamburger Menu is open
+    // Check if Hamburger Menu is open
     if (!$('.hamburger > #donutOne').hasClass('open1')) {
         // open menu
-            // hamburger mmenu Open animation
+            // hamburger menu Open animation
             $('.hamburger > #donutOne').addClass('open1');
             $('.hamburger > #donutTwo').addClass('open2');
             $('.hamburger > #donutThree').addClass('open3');
-            
+
             // Nav Menu Open
             $('.nav').addClass('navOpen');
+        
+            // X animation in
+            $('.hamburger > #donutFour').addClass('x1open');
+            $('.hamburger > #donutFive').addClass('x2open');
         
     } else {
         // close menu
             // Nav Menu Close
             $('.nav').removeClass('navOpen');
+        
+            // X animation out
+            $('.hamburger > #donutFour').removeClass('x1open');
+            $('.hamburger > #donutFive').removeClass('x2open');
+        
             // Hamburger menu Close animation
             $('.hamburger > #donutOne').removeClass('open1');
             $('.hamburger > #donutTwo').removeClass('open2');
