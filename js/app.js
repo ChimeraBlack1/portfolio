@@ -45,15 +45,17 @@ var clickBurger = function() {
             $('.hamburger > #donutFive').addClass('x2open');
         
     } else {
+        
+         // X animation out
+            $('.hamburger > #donutFour').removeClass('x1open');
+            $('.hamburger > #donutFive').removeClass('x2open');
+        
         // close menu
             // Nav Menu Close
             $('.nav').removeClass('navOpen');
         
-            // X animation out
-            $('.hamburger > #donutFour').removeClass('x1open');
-            $('.hamburger > #donutFive').removeClass('x2open');
         
-            // Hamburger menu Close animation
+        // Hamburger menu Close animation
             $('.hamburger > #donutOne').removeClass('open1');
             $('.hamburger > #donutTwo').removeClass('open2');
             $('.hamburger > #donutThree').removeClass('open3');
