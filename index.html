@@ -21,8 +21,8 @@
         <section id="nav" class="nav" alt="nav">
             <ul>
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">RESUME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#resume">RESUME</a></li>
                 <li><a href="#">CONTACT</a></li>                
             </ul>
         </section>
@@ -36,7 +36,7 @@
       
                </div>
                 </div>
-                <div class="aboutMe">
+                <div id='about' class="aboutMe">
                     <p>
                     I say <span class="bold italic">Wizard</span> because to me, working with code is like spellcasting.  <br>Instead of a spellbook full of incantations, I have a box made from refined dinosaur bone that controls lightning.
                   </p>
@@ -51,10 +51,11 @@
                 
             
                 <div class='projects'>
+                    <h1 id='projects'>Projects</h1>
                     <ul class='gallery'>
-                        <li id='gal1' class='gallery-item'></li>
-                        <li id='gal2' class='gallery-item'></li>
-                        <li id='gal3' class='gallery-item'></li>
+                        <a href="#"><li id='gal1' class='gallery-item'><div class="goverlay"><span>project 1</span></div></li></a>
+                        <a href="#"><li id='gal2' class='gallery-item'><div class="goverlay"><span>project 2</span></div></li></a>
+                        <a href="#"><li id='gal3' class='gallery-item'><div class="goverlay"><span>project 3</span></div></li></a>
                     </ul>            
                 </div>   
             
@@ -74,7 +75,9 @@
 -->
 
         
-        <section class="footer"></section>        
+        <section class="footer">
+            <h3 id='resume'><a>Resume</a></h3>  
+        </section>        
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>

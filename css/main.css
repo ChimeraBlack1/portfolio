@@ -297,30 +297,92 @@ p {
 
 /* PROJECTS */
 
+.projects h1 {
+    text-align: center;
+}
+
+.projects ul {
+    padding: 0;
+}
+
 .gallery-item{
     height: 100px;
     width: 100px;
-    margin: 0 auto;
+    margin: 5% auto;
     border: 1px solid black;
+    position: relative;
+    background-size: cover;
 }
 
 #gal1 {
+    background-image: url(../img/chris_champagne.jpg);
     
 }
 
 #gal2 {
-    
+    background-image: url(../img/Chris_tie.jpg);
 }
 
 #gal3 {
-    
+    background-image: url(../img/chris.jpg);
+}
+
+.gallery-item a {
+    cursor: pointer;
 }
 
 
+/* gallery overlay */
+.goverlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    color: rgba(255,255,255,0);
+    height: 100%;
+    width: 100%; 
+    transition: background-color 600ms, color 600ms;
+}
+
+.goverlay:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,1);
+}
+
+.goverlay span {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+
+/*********************************
+MODALS
+*********************************/
+
+/* PROFILE IMAGE MODAL*/
+/* CONTACT MODAL */
+/* TO-TOP BUTTON */
 
 
 
 
+/* FOOTER & RESUME */
+.footer {
+    height: 5.8rem;
+    background-color: burlywood;
+}
+
+.footer h3 {
+    text-align: center;
+}
+
+.footer a {
+    color: black;
+}
+
+.footer a:hover {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 
 /* Closed-Nav animation */
 
