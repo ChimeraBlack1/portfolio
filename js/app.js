@@ -25,8 +25,24 @@ document.getElementById('header').innerHTML = x;
 
 
 
+// **** OBJECTS *****
+var resume = {
+    open: function() {
+        var x = "<h4><a onclick='footerTab()'>X</a></h4>";
+            x += "<h6><a href='../docs/christopherparke.pdf'>Download PDF</a></h6>";
+        return x;
+    },
+    
+    close: function() {
+        var x = "<h3><a onclick='footerTab()'>Resume</a></h3>";
+        return x;
+    }
+}
 
-// **** FUCNTION DECLARATIONS *** 
+// **** FUNCTION DECLARATIONS *** 
+
+
+
 
 var clickBurger = function() {
     // Check if Hamburger Menu is open
@@ -118,3 +134,20 @@ var noHeader = function() {
 }
 
 
+var footerTab = function() {
+    // if tab is CLOSED... 
+    if (!$('.resume').hasClass('resume-tab-open')) {
+        // ...open it...
+        $('.resume').addClass('resume-tab-open');
+        // ... and change the text to an x
+        document.getElementById('resume').innerHTML = resume.open();
+        
+        
+    // if tab is OPEN...   
+    } else if ($('.resume').hasClass('resume-tab-open')) {
+        // ...close it
+        $('.resume').removeClass('resume-tab-open');
+        // ...and change the text back to resume
+        document.getElementById('resume').innerHTML = resume.close();
+    }
+}

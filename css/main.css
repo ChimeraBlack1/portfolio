@@ -24,6 +24,7 @@ a:hover {
     color: #fff;
     text-decoration: underline;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 ul {
@@ -376,16 +377,60 @@ MODALS
     margin: 0;
 }
 
+.footer h4 a{
+    text-decoration: none;
+}
+
+.footer h4 {
+
+    margin: 0;
+    float: right;
+}
+
 .footer a {
     color: black;
 }
 
 .footer a:hover {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 .footer h5 a:hover {
     font-size: 1rem;
+}
+
+.footer h6 {
+    text-align: left;
+    padding-top: 0;
+    float: left;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    margin:0;
+}
+
+.footer h6 a:hover {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.resume {
+    padding: 1.2rem;
+}
+
+.resume-tab-open {
+    position: fixed;
+    top: 5%;
+    left: 9%;
+    height: 80vh;
+    width: 70vw;
+    color: #fff;
+    background-color: rgba(0,0,0,0.925);
+    transition: background-color 600ms;
+    z-index: 1000;
+}
+
+.resume-tab-open a {
+    color: rgba(255,255,255,0.8);
 }
 
 /* Closed-Nav animation */
