@@ -369,10 +369,11 @@ MODALS
 .footer {
     height: 5.8rem;
     background-color: burlywood;
+    text-align: center;
 }
 
-.footer h3 {
-    text-align: center;
+.footer h5, .footer h3 {
+    margin: 0;
 }
 
 .footer a {
@@ -382,6 +383,9 @@ MODALS
 .footer a:hover {
     font-size: 1.8rem;
     cursor: pointer;
+}
+.footer h5 a:hover {
+    font-size: 1rem;
 }
 
 /* Closed-Nav animation */
